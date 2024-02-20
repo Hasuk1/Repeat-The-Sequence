@@ -60,6 +60,8 @@ class SimonGameVM(
         .putBoolean("button_backlight", field.value).apply()
     }
 
+  private lateinit var soundList: Array<Sounds>
+
   var soundListName = mutableStateOf(
     context.getSharedPreferences("sound_list_name", Context.MODE_PRIVATE)
       .getString("sound_list_name", "animal")
@@ -68,14 +70,13 @@ class SimonGameVM(
       field = value
       context.getSharedPreferences("sound_list_name", Context.MODE_PRIVATE).edit()
         .putString("sound_list_name", value.value).apply()
+
+      soundList = when (field.value) {
+        "animal" -> animalSound
+        "sms" -> smsSound
+        else -> animalSound
+      }
     }
-
-
-  private val soundList = when (soundListName.value) {
-    "animal" -> animalSound
-    "sms" -> smsSound
-    else -> animalSound
-  }
 
   fun getSoundList(): Array<Sounds> {
     return soundList
