@@ -60,7 +60,7 @@ class SimonGameVM(
         .putBoolean("button_backlight", field.value).apply()
     }
 
-  private lateinit var soundList: Array<Sounds>
+  private var soundList = animalSound
 
   var soundListName = mutableStateOf(
     context.getSharedPreferences("sound_list_name", Context.MODE_PRIVATE)
@@ -79,7 +79,11 @@ class SimonGameVM(
     }
 
   fun getSoundList(): Array<Sounds> {
-    return soundList
+    return when (soundListName.value) {
+      "animal" -> animalSound
+      "sms" -> smsSound
+      else -> animalSound
+    }
   }
 
   private val sequence = mutableListOf<Sounds>()
@@ -133,6 +137,7 @@ class SimonGameVM(
     if (playerSequence.size == sequence.size && result) {
       level.value++
       if (level.value > record.value + 1) {
+        record.value = level.value - 1
         record = mutableStateOf(level.value - 1)
       }
     } else if (!result) {

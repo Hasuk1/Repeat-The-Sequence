@@ -41,7 +41,7 @@ fun AboutAppScreen(vm: SimonGameVM) {
     GameSettingsCard(
       isSoundEnable = vm.isSoundEnabled.value,
       isButtonBacklightEnabled = vm.isButtonBacklightEnabled.value,
-      soundDelay = vm.soundDelay.value,
+      soundDelay = vm.soundDelay.value / 100,
       soundTheme = vm.soundListName.value!!
     )
     CopyrightCard("Hasuk1")
