@@ -18,19 +18,23 @@ app
 │   │   │   │   │   │   ├── RectangleButton.kt
 │   │   │   │   │   │   └── SquareButton.kt
 │   │   │   │   │   ├── combobox
-│   │   │   │   │   │   └── SoundListComboBox.kt
+│   │   │   │   │   │   └── SoundListBox.kt
 │   │   │   │   │   ├── images
 │   │   │   │   │   │   ├── BackgroundImage.kt
 │   │   │   │   │   │   └── GameLogo.kt
 │   │   │   │   │   ├── information
+│   │   │   │   │   │   ├── CopyrightCard.kt
+│   │   │   │   │   │   ├── GameConditionsCard.kt
 │   │   │   │   │   │   ├── GameInfo.kt
 │   │   │   │   │   │   ├── GameInvitation.kt
-│   │   │   │   │   │   └── LoseInfo.kt
+│   │   │   │   │   │   ├── GameSettingsCard.kt
+│   │   │   │   │   │   ├── LoseInfo.kt
+│   │   │   │   │   │   └── RecordCard.kt
 │   │   │   │   │   ├── sliders
 │   │   │   │   │   │   └── SoundDelaySlider.kt
 │   │   │   │   │   └── switches
-│   │   │   │   │       ├── SoundEnabledSwitcher.kt
-│   │   │   │   │       └── ButtonBacklightSwitcher.kt
+│   │   │   │   │       ├── ButtonBacklightSwitcher.kt
+│   │   │   │   │       └── SoundEnabledSwitcher.kt
 │   │   │   │   ├── screens
 │   │   │   │   │   ├── AboutAppScreen.kt
 │   │   │   │   │   ├── GameSettingsScreen.kt
@@ -40,9 +44,9 @@ app
 │   │   │   │   ├── types
 │   │   │   │   │   └── Type.kt
 │   │   │   │   └── theme
-│   │   │   │       ├── Color.kt
-│   │   │   │       ├── Shape.kt
-│   │   │   │       └── Theme.kt
+│   │   │   │       └──  Color.kt
+│   │   │   ├── utility
+│   │   │   │   └── SoundThemeList.kt
 │   │   │   ├── viewmodel
 │   │   │   │   └── SimonGameViewModel.kt
 │   │   │   └── MainActivity.kt
